@@ -98,7 +98,7 @@ Here is the Task Schema:
 }
 ```
 
-3. Error responses from your API should also also be a JSON object with a `message` and `data` fields. Messages have to sensible and human readable so that on the client side it can be displayed to the user. Also, it should be independent of the server side technology that you are using. For example, your API should not return an error message directly from Mongoose to the client. For examples of error messages, take a look at the API reference implementation that we have provided.
+3. Error responses from your API should also also be a JSON object with a `message` and `data` fields. Messages have to sensible and human readable so that on the client side it can be displayed to the user. Also, it should be independent of the server side technology that you are using. For example, your API should not return an error message directly from Mongoose to the client.
 
 4. Your API should respond with appropriate [HTTP status codes](http://www.restapitutorial.com/httpstatuscodes.html) for both successful and error responses. You should at least have the following codes: 200 (success), 201 (created), 404 (not found), 500 (server error).
 
@@ -108,6 +108,12 @@ Here is the Task Schema:
     - Users cannot be created (or updated) without a name or email. All other fields that the user did not specify should be set to reasonable values.
     - Multiple users with the same email cannot exist.
     - Tasks cannot be created (or updated) without a name or a deadline. All other fields that the user did not specify should be set to reasonable values.
+
+7. Your API should guarantee two-way reference between Task and User for the following methods:
+    - PUT a Task with assignedUser and assignedUserName
+    - DELETE a Task should remove the task from its assignedUser's pendingTasks
+    - PUT a User with pendingTasks
+    - DELETE a User should unassign the user's pending tasks
 
 ## 2. Getting Started
 1. Clone the repository:
