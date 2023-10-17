@@ -1,5 +1,5 @@
 # MP #3: APIed Piper
-### Due: November 11th, 2022, 11.59PM CDT
+### Due: November 07th, 2023, 11:59PM CT
 
 ## Table of Contents
 1. [Assignment](#assignment)
@@ -170,4 +170,4 @@ git remote add origin git@gitlab.com:<your-gitlab-username>/mp3.git
 ```
 3. Commit and push your local changes to this new repository.
 4. Invite `uiucwp` as a collaborator. This should be as a **reporter**, not as a *guest*, otherwise we can't see your code.
-5. Fill out and submit the form [Submission Form](https://forms.gle/ARkKhDApLCZc6Kgi6)
+5. Fill out and submit the form [Submission Form](https://forms.gle/fHufDV4U99ajRRVD8)
